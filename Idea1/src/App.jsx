@@ -1,10 +1,23 @@
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+
 import Feeds from "./Pages/Feeds"
+import Login from "./Pages/Login";
 
 function App() {
   return (
-    <>
-      <Feeds/>
-    </>
+    <Router>
+       <Routes>
+       <Route path="/login" element={<Login />} />
+       <Route path="/" element={<Feeds />} />
+       <Route path="*" element={<h1>No found</h1>} />
+
+       </Routes>
+ 
+    </Router>
   )
 }
 
