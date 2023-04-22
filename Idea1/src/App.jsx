@@ -6,17 +6,18 @@ import {
 
 import Feeds from "./Pages/Feeds"
 import Login from "./Pages/Login";
+import Register from "./Pages/register";
 
 function App() {
   return (
     <Router>
-       <Routes>
-       <Route path="/login" element={<Login />} />
-       <Route path="/" element={<Feeds />} />
-       <Route path="*" element={<h1>No found</h1>} />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Feeds />} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="*" element={<h1>No found</h1>} />
+      </Routes>
 
-       </Routes>
- 
     </Router>
   )
 }

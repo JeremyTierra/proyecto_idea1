@@ -1,4 +1,5 @@
 import img from "../assets/post1.jpg"
+import { Link } from "react-router-dom";
 export default function Login() {
     return (
         <div className="py-6 h-screen flex items-center">
@@ -12,6 +13,7 @@ export default function Login() {
                         <a href="#" className="text-center text-xs uppercase text-gray-500">login with email</a>
                         <span className="w-1/5 border-b lg:w-1/4"></span>
                     </div>
+                    <form >
                     <div className="mt-4">
                         <label className="mb-2 block text-sm font-bold text-gray-700">Email Address</label>
                         <input className="focus:shadow-outline block w-full appearance-none rounded border border-gray-300 bg-gray-200 px-4 py-2 text-gray-700 focus:outline-none" type="email" />
@@ -25,9 +27,11 @@ export default function Login() {
                     <div className="mt-8">
                         <button className="w-full rounded bg-gray-700 px-4 py-2 font-bold text-white hover:bg-gray-600">Login</button>
                     </div>
+                    </form>
+
                     <div className="mt-4 flex items-center justify-between">
                         <span className="w-1/5 border-b md:w-1/4"></span>
-                        <a href="#" className="text-xs uppercase text-gray-500">or sign up</a>
+                        <Link to="/register" className="text-xs uppercase text-gray-500">or sign up</Link>
                         <span className="w-1/5 border-b md:w-1/4"></span>
                     </div>
                 </div>
